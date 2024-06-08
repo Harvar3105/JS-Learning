@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/site.css"> 
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Atari Brakeout</title>
+</head>
+
+<body>
+    <div id="Navigation">
+        <nav class="sidenav" id="mySidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="mainPage.html">Main Page</a>
+            <a href="game.html">Game</a>
+            <a href="constructor.html">Constructor</a>
+            <a href="statistics.html">Statistics</a>
+        </nav>
+        <span id="MenuButton" onclick="openNav()">&#9776;</span>
+        <b id="Logo">Atari Brakeout</b>
+        <!-- <span style="visibility: hidden; margin-left: auto;"> Invisible align element</span> -->
+        <span id="VolumeControls" style="margin-left: auto; margin-top: 2rem; margin-right: 3rem;">
+            <img id="LowerVolume" src="minusNeon.png" draggable="false" style="height: 4rem; width: 4rem;">
+            <img id="MuteUnmuteVolume" src="noteNeon.png" draggable="false" style="height: 4rem; width: 4rem; margin-left: 2rem; margin-right: 2rem;">
+            <img id="HigherVolume" src="plusNeon.png" draggable="false" style="height: 4rem; width: 4rem;">
+        </span>
+    </div>
+    
+    <div id="stopwatch" style="color:white; font-weight: bold; font-size: 40px; display: flex; justify-content: center;" >
+        00:00
+    </div>
+
+    <div id="container">
+        <iframe id="frameElement" src="gameWindow.html"></iframe>
+    </div>
+
+    <div style="display: flex; justify-content: center;">
+        <img id="LeftArrow" src="pngegg.png" style="transform: rotate(90deg);" draggable="false">
+        <span style="visibility: hidden; margin: 10%;">Hidden element</span>
+        <img id="RightArrow" src="pngegg.png" style="transform: rotate(-90deg);" draggable="false">
+    </div>
+
+    <div id="Instructions">
+        <h1>Controls:</h1>
+        <p>Use P to pause game. Use C to continue game.</p>
+    </div>
+    <script src="/scripts/navigation.ts"></script>
+    <script>
+        let iframe = document.getElementById("frameElement");
+        window.onload = iframe.focus();
+    </script>
+
+</body>
+</html>

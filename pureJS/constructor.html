@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../resources/css/site.css"> 
+    <link rel="icon" type="image/x-icon" href="../resources/favicon.ico">
+    <title>Atari Brakeout</title>
+</head>
+
+<body>
+    <div id="Navigation">
+        <nav class="sidenav" id="mySidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="mainPage.html">Main Page</a>
+            <a href="game.html">Game</a>
+            <a href="constructor.html">Constructor</a>
+            <a href="statistics.html">Statistics</a>
+        </nav>
+        <span id="MenuButton" onclick="openNav()">&#9776;</span>
+        <b id="Logo">Atari Brakeout</b>
+        <span style="visibility: hidden; margin-left: auto;"> Invisible align element</span>
+    </div>
+    
+    <form id="brickSetting" action="constructor.html" method="get" style="color: aqua; font-size: 48px;">
+        <label for="width">Brick Width (max 200 / min 5):</label>
+        <input name="width" type="number" step="1" max="200" min="5" height="100px" width="200px">
+        <label for="height">Brick Heigth (max 50 / min 5):</label>
+        <input name="heigth" type="number" step="1" max="50" min="5" height="100px" width="200px">
+        <label for="submitButton">Submit:</label>
+        <input name="submitButton" type="submit">
+    </form>
+
+    <div id="container">
+        <iframe id="frameElement" src="constructorWindow.html"></iframe>
+    </div>
+
+    <div style="display: flex; justify-content: center;">
+        <img id="cancel" src="/resources/Cancel.png" draggable="false">
+        <span style="visibility: hidden; margin: 10%;">Hidden element</span>
+        <img id="confirm" src="/resources/Check.png" draggable="false">
+    </div>
+    
+    
+    <script src="scripts/Navigation.js"></script>
+    <script>
+        let from = document.getElementById('brickSetting');
+        let container = document.getElementById('container');
+        container.visibility = 'hidden';
+        const urlParams = new URLSearchParams(window.location.search);
+
+        if (urlParams.size != 0) {
+            container.style.visibility = 'display';
+            from.style.visibility = 'hidden';
+        }
+    </script>
+</body>
+</html>

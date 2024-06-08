@@ -1,0 +1,132 @@
+html {
+    font-size: 20px;
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-color: #111;
+    /* background-image: url('/resources/BG2.jpeg');
+    background-size: cover; */
+    /* background-size: 115% 120%;
+    background-position: 20% 46%; */
+    /* background-color: #897ac6; */
+}
+
+iframe {
+    margin-top: 1%;
+    width: 80%;
+    height: 60vh;
+    border: solid 3px purple;
+    border-radius: 5%;
+    box-shadow: 0 0 10px 5px #48abe0,
+              0 0 20px 7px #2196f3,
+              0 0 25px 20px #8a2be2,
+              0 0 40px 25px #ff1493;
+}
+
+#Navigation {
+    display: flex;
+    justify-content: center;
+    background-color: #481257;
+    width: 101%;
+}
+
+#MenuButton {
+    text-align: center;
+    width: 3.5rem;
+    font-size: 50px;
+    cursor:pointer;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    margin-right: auto;
+    margin-bottom: 1.4rem;
+    position: relative;
+    background-color: #8a2be2;
+    border-radius: 50%;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+  
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+  
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+  
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#Logo {
+    letter-spacing: 0.15rem;
+    font-family: sans-serif;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 50px;
+    background-color: blueviolet;
+    border-radius: 1rem;
+    padding-inline: 2rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: -4px 4px #ef3550,
+                -8px 8px #f48fb1,
+                -12px 12px #7e57c2,
+                -16px 16px #2196f3,
+                -20px 20px #26c6da,
+                -24px 24px #43a047,
+                -28px 28px #eeff41,
+                -32px 32px #f9a825,
+                -36px 36px #ff5722;
+}
+
+#App {
+    background-color: #2c2c2c;
+    margin-top: 2.5rem;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+#Instructions {
+    color: white;
+    margin-top: 6rem;
+    margin-left: 12rem;
+}
+
+#Instructions > h1 {
+    font-size: 36;
+}
+
+#Instructions > p {
+    font-size: 28;
+}

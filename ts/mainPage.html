@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/site.css"> 
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Atari Brakeout</title>
+</head>
+
+<body>
+    <div id="Navigation">
+        <nav class="sidenav" id="mySidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="mainPage.html">Main Page</a>
+            <a href="game.html">Game</a>
+            <a href="constructor.html">Constructor</a>
+            <a href="statistics.html">Statistics</a>
+        </nav>
+        <span id="MenuButton" onclick="openNav()">&#9776;</span>
+        <b id="Logo">Atari Brakeout</b>
+        <span style="visibility: hidden; margin-left: auto;"> Invisible align element</span>
+    </div>
+
+    <div id="levels">
+
+    </div>
+        
+    <script src="/scripts/navigation.ts"></script>
+    
+    <script>
+        var levelDiv = document.getElementById("levels");
+        console.log(levelDiv);
+        var levelsKeys = Object.keys(localStorage).filter(item => item.startsWith("Level-"));
+        console.log(levelsKeys)
+
+        for(var key of levelsKeys ){
+            var level = localStorage.getItem(key);
+            var cell = document.createElement("div");
+            cell.style.width = "75px";
+            cell.style.height = "40px";
+            cell.style.backgroundColor = "#5abc83";
+            cell.innerText = key;
+            cell.style.textAlign = "center";
+            cell.style.verticalAlign = "center";
+            cell.addEventListener("mousedown", () => {redirect(cell)})
+            levelDiv.append(cell);
+        }
+    </script>
+
+    <script>
+        function redirect(element){
+            window.location.href = "./game.html" + "?" + encodeURIComponent("MapLevel") + "=" +  encodeURIComponent(JSON.stringify(localStorage.getItem(element.innerText)));
+        }
+        
+    </script>
+</body>
+</html>

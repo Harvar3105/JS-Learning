@@ -1,0 +1,90 @@
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+  }
+  
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px;
+    }
+  }
+  
+  .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+  }
+  
+  body {
+    /*margin-bottom: 60px;*/
+    background: rgb(42,41,0);
+    background: radial-gradient(circle, rgba(42,41,0,1) 0%, rgba(29,29,1,1) 45%, rgba(22,22,0,1) 79%, rgba(14,13,0,1) 100%);
+    min-height: 100%;
+    /*background: rgb(48,48,0);*/
+    /*background: radial-gradient(circle, rgba(48,48,0,1) 0%, rgba(41,41,2,1) 22%, rgba(40,38,0,1) 44%, rgba(18,17,0,1) 100%);*/
+    color: #b6d4fe;
+  }
+  
+  .uiTextColor, .table{  /* uiTextColor - Footer buttons. table - all tables GUI's */
+    color: #b6d4fe;
+  }
+
+  .avatar-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+
+  .footer-text{
+    color: white;
+  }
+  
+  #avatar-container {
+    height: 70vh;
+    margin-top: 60px;
+    margin-left: 30px;
+    border-radius: 2px;
+    cursor: grab;
+  }
+  
+  #avatar-container:active {
+    cursor: grabbing;
+  }
+  
+  
+  
+  .stats-container {
+    margin-top: 50px;
+    margin-left: 10px;
+    color: white;
+    font-size: 16px;
+  }
+  
+  .header-text{
+    color: #968d8d !important;
+    font-size: 1.5rem;
+    transition: font-weight 0.15s,font-size 0.15s, color 0.5s, text-shadow 0.15s;
+    margin-right: 15px;
+  }
+  
+  .header-text:hover{
+    color: #c4c2c2 !important;
+    font-size: 1.35rem;
+    text-shadow: 0 0 50px #ffffff;
+    font-weight: bold;
+  }
+  
+
+
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    text-decoration: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
